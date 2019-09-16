@@ -1,0 +1,14 @@
+{
+    "JWT":{"secret":"l6bqp1nkYx5NDUGE1xP8dytUvX5YpRtlMfvr5rJjyCtkUNMywN6SB7gYQsCWmrVOCRQ4DY0SMocRsElk6AkX99HsgfIYFSOyIXulEZbqA_x0bnQnRIlnUUgvbSx6E-4reX1NAULT5jAwwMR-CVcNV8hY1E7IBs_uRgKgV6RN1AlBKalmNBwPspFs2Ms5VRRMG2Y7UGJqYLpfYdArcRMNXxTtWg17iBxp5EXoxz2bBset3xYiRIXAiefs5X60yPbGbZILiS19EhXA_LZkh0huMNRZydiPZ6rQloLRHcwDhsiIdV97Q6A-ChYyAdjGm-z7i9dlohoTS33PWHKXllRpaQ"},
+    "PORT": "3030",
+    "BASE_URL": "http://localhost:3030/",
+    "API_URL": "http://localhost:3030/api/",
+    "MYSQL": {
+      "HOST": "localhost",
+      "USER": "Hasib",
+      "PASSWORD": "KIMVOOTkimakar@12",
+      "DATABASE": "Marketplace",
+      "DIALECT": "mysql"
+    }
+  }
+  

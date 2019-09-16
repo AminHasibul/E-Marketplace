@@ -1,0 +1,24 @@
+{
+    "development": {
+      "username": "hasib",
+      "password": "hasib",
+      "database": "Marketplace_Test",
+      "host": "localhost",
+      "dialect": "mysql"
+    },
+    "test": {
+        "username": "hasib",
+        "password": "hasib",
+        "database": "Marketplace_Test",
+        "host": "localhost",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "hasib",
+        "password": "hasib",
+        "database": "Marketplace_Test",
+        "host": "localhost",
+        "dialect": "mysql"
+    }
+  }
+  

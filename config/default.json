@@ -1,0 +1,14 @@
+{
+    "PORT": "3030",
+    "BASE_URL": "http://localhost:3030/",
+    "API_URL": "http://localhost:3030/api/",
+    "MYSQL": {
+      "HOST": "localhost",
+      "USER": "hasib",
+      "PASSWORD": "hasib",
+      "DATABASE": "Marketplace_Test",
+      "DIALECT": "mysql",
+      "dialectModulePath": "mysql"
+    }
+  }
+  
