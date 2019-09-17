@@ -3,7 +3,7 @@ var {Sequelize} = require('sequelize');
 var  mysqlDb = require('../../libs/dbConnect/mySqlConnect');
 const DataTypes = Sequelize;
 
-/*var User = mysqlDb.define(
+var User = mysqlDb.define(
     'Users',
     {
         id: {
@@ -43,4 +43,4 @@ mysqlDb.sync()
 .then(() => console.log("Database has been synced"))
 .catch((err) => console.error("Error creating databse"+err))
 
-exports = module.exports= User;*/
+module.exports= User;

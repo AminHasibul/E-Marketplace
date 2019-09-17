@@ -1,9 +1,17 @@
 'user strict';
 var sql = require('../../libs/dbConnect/mysqlCon.js');
 
+var CommonEnum = require('../../libs/helper/enums.js');
+var {Sequelize} = require('sequelize');
+var  mysqlSequelizeConDb = require('../../libs/dbConnect/mySqlConnect');
+
+const DataTypes = Sequelize;
+
 //Task object constructor
-var User = function(user){
-    this.id = 3;
+var User = function(user)
+{
+    //this.id = CommonEnum.NewMasterID.value;
+    this.id = 1;
     this.username = user.username;
     this.password = user.password;
     this.email = user.email;
@@ -25,20 +33,37 @@ User.createUser = function (newUser, result) {
                 }
             });           
 };
-User.getUserById = function (uid, result) {
-   console.log(uid);
-        sql.query("Select *from Users where id=?",uid,function (err, res) {             
+User.getUserById = function (userId, result) {
+   console.log(userId);
+        sql.query("Select * from Users where id = ? " ,[userId],function (err, res) {             
                 if(err) {
                     console.log("error: ", err);
                     result(err, null);
                 }
                 else{
-                    console.log (id);
+                    console.log (userId);
                     result(null, res);
                     
                 }
             });   
 };
+
+exports.listUser = (perPage, page) => {
+    return new Promise((resolve, reject) => {
+        User.find()
+            .limit(perPage)
+            .skip(perPage * page)
+            .exec(function (err, users) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(users);
+                }
+            })
+    });
+};
+
+
 User.getAllUser = function (result) {
         sql.query("Select * from Users", function (err, res) {
 
@@ -53,8 +78,8 @@ User.getAllUser = function (result) {
                 }
             });   
 };
-User.updateById = function(id, email, result){
-  sql.query("UPDATE Users SET email = ? WHERE id = ?", [user.email, id], function (err, res) {
+User.patchUserById = function(userId, email, result){
+  sql.query("UPDATE Users SET email = ? WHERE id = ?", [email, userId], function (err, res) {
           if(err) {
               console.log("error: ", err);
                 result(null, err);
@@ -64,18 +89,40 @@ User.updateById = function(id, email, result){
                 }
             }); 
 };
-User.remove = function(id, result){
-     sql.query("DELETE FROM Users WHERE id = ?", [id], function (err, res) {
 
-                if(err) {
-                    console.log("error: ", err);
-                    result(null, err);
-                }
-                else{
-               
-                 result(null, res);
-                }
-            }); 
+
+User.findByEmail = function(email, result)
+{
+    sql.query("Select * from Users where email = ?", [email], function (err, res) 
+    {
+        if(err)
+        {
+            console.log("error: ", err);
+            result(null, err);
+        }
+        else
+        {   
+            result(null, res);
+        }
+    }); 
+};
+
+
+User.remove = function(userId, result)
+{
+     sql.query("DELETE FROM Users WHERE id = ?", [userId], function (err, res)
+     {
+
+        if(err)
+        {
+            console.log("error: ", err);
+            result(null, err);
+        }
+        else
+        {
+            result(null, res);
+        }
+    }); 
 };
 
 module.exports= User;
