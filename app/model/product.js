@@ -1,25 +1,41 @@
-'user strict';
-var sql = require('../../libs/dbConnect/mysqlCon.js');
+/*'user strict';
+const connection = require('../../libs/dbConnect/mysqlCon.js');
 
-var CommonEnum = require('../../libs/helper/enums.js');
-var {Sequelize} = require('sequelize');
-var  mysqlSequelizeConDb = require('../../libs/dbConnect/mySqlConnect');
+const schemaProduct = new mysqlDb.Schema(
+    {
+        description: {
+            type: String,
+            allowNull: false,
+            required:true,
+            trim:true,
+        },
+        completed: {
+            type: Boolean,
+            default: false
+        },
+        owner: {
+            type: mysqlDb.Schema.Types.ObjectID,
+            required:true,
+        },
+        email: {
+            type: DataTypes.STRING(100),
+            allowNull: false
+        },
+        created_at: {
+            type: DataTypes.DATE,
+            allowNull: true
+        },
+        updated_at: {
+            type: DataTypes.DATE,
+            allowNull: true
+        }
+    },
+    {
+        timestamps:true
+    }
+);
 
-const DataTypes = Sequelize;
-
-//Task object constructor
-var User = function(user)
-{
-    //this.id = CommonEnum.NewMasterID.value;
-    this.id = 1;
-    this.username = user.username;
-    this.password = user.password;
-    this.email = user.email;
-    this.status = user.status;
-    this.created_at = new Date();;
-    this.updated_at = new Date();
-    this.deleted_at = null;
-};
+const Product = mysqlDb.model('Task',taskschema)
 User.createUser = function (newUser, result) {    
         sql.query("INSERT INTO Users set ?", newUser, function (err, res) {
                 
@@ -48,53 +64,36 @@ User.getUserById = function (userId, result) {
             });   
 };
 
-User.getAllUser = function (limit,skip,result)
- {
-    var query = "Select count(*) as TotalRow from Users"; 
-  
-    sql.query(query, function(err, rows)
-    {
-        if(err)
-        {
-            console.log("error: ", err);
-            result(null, err);
-        }
-        else
-        {    
-            let totalRow = rows[0].TotalRow
-        
-            
-            sql.query("Select * from Users ORDER BY created_at DESC  limit ? OFFSET ?",[limit,skip],function (err, res) 
-            {
+exports.listUser = (perPage, page) => {
+    return new Promise((resolve, reject) => {
+        User.find()
+            .limit(perPage)
+            .skip(perPage * page)
+            .exec(function (err, users) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(users);
+                }
+            })
+    });
+};
 
-                if(err)
-                {
+
+User.getAllUser = function (result) {
+        sql.query("Select * from Users", function (err, res) {
+
+                if(err) {
                     console.log("error: ", err);
                     result(null, err);
                 }
                 else{
-                    console.log('use : ', res);  
+                  console.log('use : ', res);  
 
-                    result( null ,res);
+                 result(null, res);
                 }
-            }); 
-        }
-    })  
+            });   
 };
-/*/User.getAllUser = function (result) {
-   sql.query("Select * from Users", function (err, res) {
-
-        if(err) {
-               console.log("error: ", err);
-                result(null, err);
-            }
-            else{
-              console.log('use : ', res);  
-
-             result(null, res);
-            }
-        });   
-};*/
 User.patchUserById = function(userId, email, result){
   sql.query("UPDATE Users SET email = ? WHERE id = ?", [email, userId], function (err, res) {
           if(err) {
@@ -141,18 +140,9 @@ User.remove = function(userId, result)
         }
     }); 
 };
-User.listUser = function (limit, page,result)
-{
-    User.find()
-        .limit(limit)
-        .skip(limit * page)
-        .exec(function (err, users) {
-            if (err) {
-                result(err, null);
-            } else {
-                result(err, null);
-            }
-        })
-};
 
-module.exports= User;
+mysqlDb.sync()
+.then(() => console.log("Database has been synced"))
+.catch((err) => console.error("Error creating databse"+err))
+
+//module.exports= Product;

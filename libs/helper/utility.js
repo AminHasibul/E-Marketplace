@@ -1,3 +1,4 @@
+const Joi = require('joi');
 const  errorPlaceHolder = (status, success, message, data) => ({
     status,
     success,
@@ -22,6 +23,17 @@ var ValidateEmail =function(mailAddress)
         return false;
     }
 }
+function validateUser(user)
+{
+    const schema =
+    {
+        username : Joi.string().min(2).required()  
+       // email : Joi.email().required()
+    };
+    return result =Joi.validate(user,schema);
+}
+
 module.exports = {
-    ValidateEmail
+    ValidateEmail,
+    validateUser
 }

@@ -23,19 +23,20 @@ const ADMIN = config.permissionLevels.ADMIN;
 const PAID = config.permissionLevels.PAID_USER;
 const FREE = config.permissionLevels.NORMAL_USER;
 
-exports.routesConfig = function (app) {
+exports.routesConfig = function (app)
+ {
     app.post('/users', [
         UsersController.create_user
     ]);
     app.get('/users', [
-        ValidationMiddleware.validJWTNeeded,
+        //ValidationMiddleware.validJWTNeeded,
         //PermissionMiddleware.minimumPermissionLevelRequired(PAID),
         UsersController.list_all_user
     ]);
-    app.get('/usersList', [
-      ValidationMiddleware.validJWTNeeded,
+    app.get('/listAllUsers', [
+      //ValidationMiddleware.validJWTNeeded,
       //PermissionMiddleware.minimumPermissionLevelRequired(PAID),
-      UsersController.listUsers
+      UsersController.listAllUsers
   ]);
     app.get('/users/:userId', [
         ValidationMiddleware.validJWTNeeded,

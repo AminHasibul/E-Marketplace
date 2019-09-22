@@ -39,6 +39,20 @@ var User = mysqlDb.define(
     },
 );
 
+User.listUser = function (perPage, page,result){
+
+        User.find()
+            .limit(perPage)
+            .skip(perPage * page)
+            .exec(function (err, users) {
+                if (err) {
+                    result(err, null);
+                } else {
+                    result(err, null);
+                }
+            })
+};
+
 mysqlDb.sync()
 .then(() => console.log("Database has been synced"))
 .catch((err) => console.error("Error creating databse"+err))
