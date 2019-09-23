@@ -1,5 +1,8 @@
-var config = require('config') ;
-var mysql = require('mysql');
+const config = require('config') ;
+const mysql = require('mysql');
+const logger = require('../helper/logger')
+
+logger.info("Opening connection to MySql DB")
 
 const DBOptions = {
     host: config.get('MYSQL.HOST'),
@@ -11,14 +14,10 @@ const DBOptions = {
         min:0,
         max:5,
     }
-    //dialectModulePath:config.get('MYSQL.dialectModulePath')
 };
 'user strict';
 
-
-
-//local mysql db connection
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host     : DBOptions.host,
     user     : DBOptions.user,
     password : DBOptions.password,
@@ -33,8 +32,13 @@ var connection = mysql.createConnection({
         idle: 10000
     },
 });
-connection.connect(function(err) {
-    if (err) throw err;
+connection.connect(function(err)
+ {
+    if (err)
+    {
+        logger.info("Connection Error:" + err.message.toString());
+        throw err;
+    }
 });
 
 module.exports = connection;

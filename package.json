@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "app-root-path": "^2.2.1",
     "body-parser": "^1.19.0",
     "config": "^3.2.2",
     "cookie-parser": "^1.4.4",
@@ -16,6 +17,7 @@
     "express": "^4.17.1",
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
+    "log4js": "^5.1.0",
     "morgan": "^1.9.1",
     "mysql": "^2.17.1",
     "mysql2": "^1.7.0",
@@ -23,7 +25,8 @@
     "save": "^2.4.0",
     "sequelize": "^5.18.4",
     "uuid": "^3.3.3",
-    "vim": "^0.1.0"
+    "vim": "^0.1.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {},
   "description": ""

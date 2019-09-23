@@ -1,12 +1,11 @@
-var Enum = require('enum');
 
-var NewID = new Enum(
+const Enumns = 
 {
     'NewMasterID': "***NewID***",
     'NewMasterID': "***NewChildID***",
-});
+};
 
 
-module.exports = NewID;
+module.exports = Enumns;
 
-
+ 

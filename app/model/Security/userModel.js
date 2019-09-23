@@ -1,13 +1,8 @@
 'user strict';
-var sql = require('../../libs/dbConnect/mysqlCon.js');
-
-var CommonEnum = require('../../libs/helper/enums.js');
-var {Sequelize} = require('sequelize');
-var  mysqlSequelizeConDb = require('../../libs/dbConnect/mySqlConnect');
-
-const DataTypes = Sequelize;
-
-//Task object constructor
+var sql = require('../../../libs/dbConnect/mysqlCon.js');
+var CommonEnum = require('../../../libs/helper/enums.js');
+var logger = require('../../../libs/helper/logger');
+var {Paging} = require('../../../libs/utility/pageSetup');
 var User = function(user)
 {
     //this.id = CommonEnum.NewMasterID.value;
@@ -20,81 +15,78 @@ var User = function(user)
     this.updated_at = new Date();
     this.deleted_at = null;
 };
-User.createUser = function (newUser, result) {    
-        sql.query("INSERT INTO Users set ?", newUser, function (err, res) {
-                
-                if(err) {
-                    console.log("error: ", err);
-                    result(err, null);
-                }
-                else{
-                    console.log(res.insertId);
-                    result(null, res.insertId);
-                }
-            });           
+User.createUser = function (newUser, result)
+{    
+    sql.query("INSERT INTO Users set ?", newUser, function (err, res) {
+            
+            if(err) {
+                console.log("error: ", err);
+                result(err, null);
+            }
+            else{
+                console.log(res.insertId);
+                result(null, res.insertId);
+            }
+        });           
 };
-User.getUserById = function (userId, result) {
+User.getUserById = function (userId, result)
+ {
    console.log(userId);
-        sql.query("Select * from Users where id = ? " ,[userId],function (err, res) {             
-                if(err) {
-                    console.log("error: ", err);
-                    result(err, null);
-                }
-                else{
-                    console.log (userId);
-                    result(null, res);
-                    
-                }
-            });   
+    sql.query("Select * from Users where id = ? " ,[userId],function (err, res) {             
+            if(err) {
+                console.log("error: ", err);
+                result(err, null);
+            }
+            else{
+                console.log (userId);
+                result(null, res);
+                
+            }
+        });   
 };
 
 User.getAllUser = function (limit,skip,result)
  {
+     logger.info("Getting User List");
     var query = "Select count(*) as TotalRow from Users"; 
   
     sql.query(query, function(err, rows)
     {
+        logger.info("Getting TotalRow from getAllUser method"+rows[0].TotalRow +"  " +skip);
         if(err)
         {
+            logger.info("Getting User List error: " + err);
             console.log("error: ", err);
             result(null, err);
         }
         else
         {    
+            logger.info("Getting User List : " + rows[0].TotalRow);
             let totalRow = rows[0].TotalRow
-        
-            
+             
             sql.query("Select * from Users ORDER BY created_at DESC  limit ? OFFSET ?",[limit,skip],function (err, res) 
             {
 
                 if(err)
-                {
+                { 
+                     logger.info("Getting User List error:"+ err.message);
                     console.log("error: ", err);
                     result(null, err);
                 }
                 else{
-                    console.log('use : ', res);  
+                    logger.info("Getting User List : " + rows[0].TotalRow);
+                    console.log('use:', res); 
 
+                    
+                    var data = Paging(skip,limit,totalRow);
+                    res.push("TotalRow:"+totalRow);
+                    res.push("Showing:"+data);
                     result( null ,res);
                 }
             }); 
         }
     })  
 };
-/*/User.getAllUser = function (result) {
-   sql.query("Select * from Users", function (err, res) {
-
-        if(err) {
-               console.log("error: ", err);
-                result(null, err);
-            }
-            else{
-              console.log('use : ', res);  
-
-             result(null, res);
-            }
-        });   
-};*/
 User.patchUserById = function(userId, email, result){
   sql.query("UPDATE Users SET email = ? WHERE id = ?", [email, userId], function (err, res) {
           if(err) {
@@ -106,8 +98,6 @@ User.patchUserById = function(userId, email, result){
                 }
             }); 
 };
-
-
 User.findByEmail = function(email, result)
 {
     sql.query("Select * from Users where email = ?", [email], function (err, res) 
@@ -123,7 +113,6 @@ User.findByEmail = function(email, result)
         }
     }); 
 };
-
 
 User.remove = function(userId, result)
 {
@@ -141,18 +130,4 @@ User.remove = function(userId, result)
         }
     }); 
 };
-User.listUser = function (limit, page,result)
-{
-    User.find()
-        .limit(limit)
-        .skip(limit * page)
-        .exec(function (err, users) {
-            if (err) {
-                result(err, null);
-            } else {
-                result(err, null);
-            }
-        })
-};
-
 module.exports= User;

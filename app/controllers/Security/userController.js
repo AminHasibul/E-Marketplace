@@ -1,20 +1,41 @@
 'use strict';
 
-const UserModel = require('../model/userModel.js');
-const User = require('../model/user');
-const utility = require('../../libs/helper/utility');
+const UserModel = require('../../model/Security/userModel.js');
+const utility = require('../../../libs/utility/validation');
+const logger = require('../../../libs/helper/logger');
+const {Helper} = require('../../../libs/helper');
 const crypto = require('crypto');
 const Joi = require('joi');
-
+logger.info("Writing from the user controler, Get controller name");
+//const BaseController = require('../baseController');
+var userController ={};
+var controllerName = Helper.getFileName(__filename, __dirname);
+logger.info("Writing from the user controler, Get controller name" + controllerName);
+/*exports.userController = BaseController(controllerName,UserModel,{options: {
+  include: [
+      {
+          model: UserModel,
+          required: false,
+          as: 'users'
+      }    
+  ]
+}
+});
+*/
 exports.list_all_user = function(req, res)
 {
+ 
     UserModel.getAllUser(function(err, user) {
-
-    console.log('controller')
     if (err)
+    {
+     
       res.send(err);
+    }
+    else
+    {
       console.log('res', user);
-    res.send(user);
+      res.send(user);
+    }
   });
 };
 
@@ -23,10 +44,12 @@ exports.list_all_user = function(req, res)
 exports.create_user = function(req, res)
 {
   //using object distructon
+  logger.info("Creating new user from User API")
   const {error} = utility.validateUser(req.body);
 
   if(error)
   {
+    logger.info("Error Creating user from User API"+ error.details[0].message)
     res.status(400).send(error.details[0].message);
   }
   var new_user = req.body;
@@ -48,8 +71,14 @@ exports.create_user = function(req, res)
     UserModel.createUser(new_user, function(err, user)
     {   
       if (err)
+      {
+        logger.log("Error Creating user from User API"+ err.message)
         res.send(err);
+      }
+      else
+      {
         res.json(user);
+      }
     });
   }
 };
@@ -90,6 +119,7 @@ exports.delete_a_user = function(req, res)
 
 exports.listAllUsers = function(req, res) 
 {
+  logger.info("Retriving users list from User API")
   let limit = req.query.limit && req.query.limit <= 100 ? parseInt(req.query.limit) : 10;
   let page = 0;
   let skip =0;
@@ -107,7 +137,11 @@ exports.listAllUsers = function(req, res)
   UserModel.getAllUser(limit,skip,function(err, result) 
   {
     if (err)
+    {
+      logger.info("Error Retriving users list from User API"+ err.message)
+ 
       res.send(err);
+    }
     else
     {
       console.log('res', result);
