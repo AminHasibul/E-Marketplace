@@ -14,7 +14,7 @@ module.exports = BaseController = (controllerName, Model, option = {}) =>
       {
         logger.info("Writing from the user controler, Get BaseController Err " + err);
         res.send(err);
-      }
+      }  
       else
       {
         console.log('res', user);

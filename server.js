@@ -8,8 +8,9 @@ var path = require('path');
 
 const app = express();
 
-const authRouter = require('./app/routes/api/authRoute');
-const UsersRouter = require('./app/routes/api/user/route');
+//var API = require('./app/routes/route');
+//const authRouter = require('./app/routes/api/authRoute');
+//const UsersRouter = require('./app/routes/api/user/route');
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -29,14 +30,21 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-authRouter.routesConfig(app);
-UsersRouter.routesConfig(app);
+//app.use(router.API);
+//API(app);
+//authRouter.routesConfig(app);
+//UsersRouter.routesConfig(app);
 
 app.use('/',express.static(path.join(__dirname, 'public')));
-//app.use('/api',require('./app/routes/api').route)
+//app.use(Router.Api)
 app.set('case sensitive routing', true);
-//var routes = require('./app/routes/api/user/route'); //importing route
-//routes(app);
+var Routes = require('./app/routes/route'); //importing route
+
+
+Routes.API.authRoute.authRoute(app);
+Routes.API.usersRoute.userRoute(app);
+Routes.API.smsRoute.routesConfig(app);
+//api.authRouter(app);
 const port = config.port || 3000;
 app.listen(port, function () {
     console.log('app listening at port %s', port);

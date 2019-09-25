@@ -41,4 +41,24 @@ connection.connect(function(err)
     }
 });
 
+
+const rollback = function (connection, err) 
+{
+    connection.rollback(function () 
+    {
+        throw err;
+    });
+}
+
+const commit = function(connection)
+ {
+    connection.commit(function (err)
+    {
+        if (err) {
+            rollback(connection, err);
+        }
+        console.log('success!');
+    });
+}
+
 module.exports = connection;

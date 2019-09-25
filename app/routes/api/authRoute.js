@@ -2,7 +2,7 @@ const VerifyUserMiddleware = require('./auth/verifyUser');
 const AuthorizationController = require('./auth/authenticate');
 const AuthValidationMiddleware = require('../../../common/middleware/authValidation');
 const logger = require('../../../libs/helper/logger');
-exports.routesConfig = function (app) {
+var authRoute = function (app) {
 
     app.post('/auth', [
         //logger.info()
@@ -18,3 +18,4 @@ exports.routesConfig = function (app) {
         AuthorizationController.login
     ]);
 };
+module.exports = {authRoute}

@@ -1,41 +1,56 @@
-/*'user strict';
-const connection = require('../../libs/dbConnect/mysqlCon.js');
+'user strict';
+const con = require('../../libs/dbConnect/mysqlCon.js');
+const BaseModel = require('../baseModel');
+var logger = require('../../../libs/helper/logger');
 
-const schemaProduct = new mysqlDb.Schema(
+exports.InsertData = function (PurchaseMaster,PurchaseDetails, result)
+{
+    try
     {
-        description: {
-            type: String,
-            allowNull: false,
-            required:true,
-            trim:true,
-        },
-        completed: {
-            type: Boolean,
-            default: false
-        },
-        owner: {
-            type: mysqlDb.Schema.Types.ObjectID,
-            required:true,
-        },
-        email: {
-            type: DataTypes.STRING(100),
-            allowNull: false
-        },
-        created_at: {
-            type: DataTypes.DATE,
-            allowNull: true
-        },
-        updated_at: {
-            type: DataTypes.DATE,
-            allowNull: true
-        }
-    },
-    {
-        timestamps:true
+        con.beginTransaction(function (err)
+        {
+            logger.info("Transaction Begin");
+            if (err)
+            {   logger.info("Transaction Error " + err );
+                throw err;
+            }
+
+            BaseModel.insertSingleData('PurchaseMaster',PurchaseMaster, function (err, result)
+            {
+                logger.info("Transaction insertSingleData " + PurchaseMaster);
+                if (err)
+                {
+                    logger.info("Transaction insertSingleData Eroor " + err);
+                    con.rollback(connection, err);
+                }
+
+                BaseModel.insertChildData(PurchaseDetails,PurchaseDetails,result.PurchaseOrderMasterID, function (err, data)
+                {
+                    logger.info("Transaction insertChildData " +PurchaseOrderMasterID +" "+ PurchaseDetails);
+                    if (err)
+                    {
+                        logger.info("Transaction insertChildData" +err +" "+ PurchaseDetails);
+                        con.rollback(connection, err);
+                    } else 
+                    {
+                        con.commit(connection);
+                    }
+                });
+            });
+        });
     }
-);
+    catch(ex)
+    {
+        logger.info("Exceptionm from the model before called");
+    }
+};
+  
 
-const Product = mysqlDb.model('Task',taskschema)
+
+
+
+
+/*const Product = mysqlDb.model('Task',taskschema)
 User.createUser = function (newUser, result) {    
         sql.query("INSERT INTO Users set ?", newUser, function (err, res) {
                 
@@ -85,7 +100,7 @@ User.getAllUser = function (result) {
 
                 if(err) {
                     console.log("error: ", err);
-                    result(null, err);
+                    result(null, err);purchase
                 }
                 else{
                   console.log('use : ', res);  
@@ -144,5 +159,5 @@ User.remove = function(userId, result)
 mysqlDb.sync()
 .then(() => console.log("Database has been synced"))
 .catch((err) => console.error("Error creating databse"+err))
-
-//module.exports= Product;
+*/
+module.exports= PurchaseMaster;

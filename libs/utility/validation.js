@@ -14,7 +14,7 @@ const  placeHolder = (success, message, data) => ({
 
 var ValidateEmail =function(mailAddress)
 {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*utility(\.\w{2,3})+$/;
     if(mailAddress.match(mailformat))
     {
         return true;
