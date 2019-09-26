@@ -1,9 +1,9 @@
 'user strict';
-const con = require('../../libs/dbConnect/mysqlCon.js');
+const con = require('../../../libs/dbConnect/mysqlCon.js');
 const BaseModel = require('../baseModel');
 var logger = require('../../../libs/helper/logger');
 
-exports.InsertData = function (PurchaseMaster,PurchaseDetails, result)
+const InsertData = function (PurchaseMaster,PurchaseDetails, callback)
 {
     try
     {
@@ -14,8 +14,8 @@ exports.InsertData = function (PurchaseMaster,PurchaseDetails, result)
             {   logger.info("Transaction Error " + err );
                 throw err;
             }
-
-            BaseModel.insertSingleData('PurchaseMaster',PurchaseMaster, function (err, result)
+            //urchaseMaster.for
+            BaseModel.insertSingleData('PurchaseMaster',PurchaseMaster, callback,function (err, result)
             {
                 logger.info("Transaction insertSingleData " + PurchaseMaster);
                 if (err)
@@ -24,7 +24,7 @@ exports.InsertData = function (PurchaseMaster,PurchaseDetails, result)
                     con.rollback(connection, err);
                 }
 
-                BaseModel.insertChildData(PurchaseDetails,PurchaseDetails,result.PurchaseOrderMasterID, function (err, data)
+                BaseModel.insertChildData(PurchaseDetails,PurchaseDetails,result.PurchaseOrderMasterID,resultdetails,true, function (err, data)
                 {
                     logger.info("Transaction insertChildData " +PurchaseOrderMasterID +" "+ PurchaseDetails);
                     if (err)
@@ -160,4 +160,4 @@ mysqlDb.sync()
 .then(() => console.log("Database has been synced"))
 .catch((err) => console.error("Error creating databse"+err))
 */
-module.exports= PurchaseMaster;
+module.exports= {BaseModel,InsertData};

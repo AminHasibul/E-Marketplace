@@ -43,10 +43,11 @@ var Routes = require('./app/routes/route'); //importing route
 
 Routes.API.authRoute.authRoute(app);
 Routes.API.usersRoute.userRoute(app);
+Routes.API.shopsRoute.shopRoute(app);
 Routes.API.smsRoute.routesConfig(app);
 //api.authRouter(app);
 const port = config.port || 3000;
-app.listen(port, function () {
+app.listen(9908, function () {
     console.log('app listening at port %s', port);
 });
 

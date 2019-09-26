@@ -1,6 +1,6 @@
 'use strict';
 
-const UserModel = require('../../model/Security/userModel.js');
+const purchaseModel = require('../../model/Shop/purchaseModel');
 const utility = require('../../../libs/utility/validation');
 const logger = require('../../../libs/helper/logger');
 const {Helper} = require('../../../libs/helper');
@@ -10,62 +10,69 @@ const Joi = require('joi');
 logger.info("Writing from the Purchase Controller");
 
 
-exports.insertPurchjseDetails = function(req, res)
+exports.insertPurchaseDetails = function(req, res)
 {
   //using object distructon
-  logger.info("Creating New Purchase")
+  logger.info("Creating New Purchase");
+  console.log("Creating New Purchase");
   //const {error} = utility.validateUser(req.body);
+  console.log(req.body);
+  console.log( req.body.data);
+  var purchaseList = req.body.PurchaseMaster;
 
+  logger.info("Creating New Purchase"+purchaseList);
+  console.log("Creating New Purchase"+purchaseList);
   //if(error)
   //{
     //logger.info("Error Creating user from User API"+ error.details[0].message)
     //res.status(400).send(error.details[0].message);
   //}
-  var purchaseMaster = req[0].body;
-  var purchaseChild = req[1].body;
-  //if (!(utility.ValidateEmail(new_user.email)))
-  //{
-      //res.status(400).send({ error:true, message: 'Please provide a valid email' });
-  //}
-  //else
-    //{
+  //var purchaseMaster = req[0].body;
+  //var purchaseChild = req[1].body;
+ 
+  var totalRow = purchaseList.length;
+  console.log("Creating New Purchase"+totalRow);
+  var purchaseDetailsList = purchaseList.PurchaseDetails;
+  logger.info("Creating New Purchase"+totalRow);
+  purchaseList.forEach(function(items) 
+  { 
+      var masterID = "";
+      masterID = purchaseModel.BaseModel.makeUniqueKeyForMaster("PurchaseMaster",totalRow,"PM");
+      logger.info("Creating New Purchase"+masterID);
+      var childSeq = 0
+       
+      console.log(items);
+      
+      items.PurchaseMasterID = masterID;
+      purchaseDetailsList = items.PurchaseDetails;
+      var totalChildRow = purchaseDetailsList.length;
+      var childSeq = purchaseModel.BaseModel.getUniqueSeqForchild("PurchaseDetails",totalChildRow);
+  
+      purchaseDetailsList.forEach(function(itemDetails)
+      {
+          var childID = purchaseModel.BaseModel.makeUniqueKeyForchild(childSeq,"PD"); 
+          itemDetails.PurchaseDetailsID = childID;
+          itemDetails.PurchaseMasterID = masterID;
 
-    //const cipher = crypto.createCipher('aes128', 'a password');
-    //var encrypted = cipher.update(password, 'utf8', 'hex');
-    // encrypted += cipher.final('hex');
-    //let salt = crypto.randomBytes(16).toString('base64');
-    //let hash = crypto.createHmac('sha512',salt)
-                                  //.update(new_user.password)
-                                  //.digest("base64");
-    //new_user.password = salt + "$" + hash;
-    var masterID = "";
-    var childID = "";
-    async.each(ItemList, function (Item, asyncCallback)
+          childSeq ++;
+          console.log(childID,childSeq);
+      });
+     // var itemMaster = items;
+      let itemMaster = items;
+      delete itemMaster.PurchaseDetails;
+      console.log(purchaseDetailsList);
+      console.log(masterID);
+  });
+  purchaseModel.InsertData(purchaseList,purchaseDetailsList, function(err, purchase)
+  {   
+    if (err)
     {
-        connection.query('INSERT INTO ? SET ?', [TableName,Item], function (err, data) {
-            return asyncCallback(err, data);
-        });
-    }, 
-    function (err) 
+      logger.info("Error Purchase user from User API"+ err.message)
+      res.send(err);
+    }
+    else
     {
-        if (err)
-        {
-            return callback(err);
-        }
-        return callback();
-    });
-    UserModel.createUser(new_user, function(err, user)
-    {   
-        
-      if (err)
-      {
-        logger.log("Error Creating user from User API"+ err.message)
-        res.send(err);
-      }
-      else
-      {
-        res.json(user);
-      }
-    });
-  }
+      res.send(purchase);
+    }
+  });
 };
