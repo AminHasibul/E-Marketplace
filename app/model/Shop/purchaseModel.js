@@ -3,7 +3,7 @@ const con = require('../../../libs/dbConnect/mysqlCon.js');
 const BaseModel = require('../baseModel');
 var logger = require('../../../libs/helper/logger');
 
-const InsertData = function (PurchaseMaster,PurchaseDetails, callback)
+const InsertData = function (purchaseMasterList,purchaseDetailsList, callback)
 {
     try
     {
@@ -14,34 +14,52 @@ const InsertData = function (PurchaseMaster,PurchaseDetails, callback)
             {   logger.info("Transaction Error " + err );
                 throw err;
             }
-            //urchaseMaster.for
-            BaseModel.insertSingleData('PurchaseMaster',PurchaseMaster, callback,function (err, result)
+            var tableList = [];
+            tableList.push("PurchaseMaster");
+            tableList.push("PurchaseDetails");
+           
+            var dataValueList = [purchaseMasterList,purchaseDetailsList]
+            
+            BaseModel.insertMasterChildData(tableList,dataValueList,con,callback,function (err, result)
             {
-                logger.info("Transaction insertSingleData " + PurchaseMaster);
+                logger.info("Transaction insertSingleData " + purchaseDetailsList);
+
+                console.log("Transaction insertSingleData " + purchaseDetailsList);
                 if (err)
                 {
                     logger.info("Transaction insertSingleData Eroor " + err);
-                    con.rollback(connection, err);
+                    con.rollback(con, err);
+                    callback(null,err);
                 }
-
-                BaseModel.insertChildData(PurchaseDetails,PurchaseDetails,result.PurchaseOrderMasterID,resultdetails,true, function (err, data)
+                else
                 {
-                    logger.info("Transaction insertChildData " +PurchaseOrderMasterID +" "+ PurchaseDetails);
-                    if (err)
+                   
+                    con.commit(con);
+                    callback(null,result);
+                    BaseModel.insertChildData('PurchaseDetails',purchaseDetailsList,true, function (err, data)
                     {
-                        logger.info("Transaction insertChildData" +err +" "+ PurchaseDetails);
-                        con.rollback(connection, err);
-                    } else 
-                    {
-                        con.commit(connection);
-                    }
-                });
+                        logger.info("Transaction insertChildData " + purchaseDetailsList);
+                        if (err)
+                        {
+                            logger.info("Transaction insertChildData" +err +" "+ purchaseDetailsList);
+                            con.rollback(con, err);
+                        } else 
+                        {
+                            con.commit(con);
+                        }
+                    });
+                }
             });
-        });
+            if(err)
+            {
+                logger.info("err"+ err);
+            }
+        });     
     }
     catch(ex)
     {
         logger.info("Exceptionm from the model before called");
+        throw ex;
     }
 };
   

@@ -9,7 +9,7 @@ const Joi = require('joi');
 
 logger.info("Writing from the Purchase Controller");
 
-
+var valueList = null;
 exports.insertPurchaseDetails = function(req, res)
 {
   //using object distructon
@@ -32,7 +32,9 @@ exports.insertPurchaseDetails = function(req, res)
  
   var totalRow = purchaseList.length;
   console.log("Creating New Purchase"+totalRow);
+  
   var purchaseDetailsList = purchaseList.PurchaseDetails;
+  var valueList = [];
   logger.info("Creating New Purchase"+totalRow);
   purchaseList.forEach(function(items) 
   { 
@@ -56,23 +58,26 @@ exports.insertPurchaseDetails = function(req, res)
 
           childSeq ++;
           console.log(childID,childSeq);
+          valueList.push(itemDetails);
       });
      // var itemMaster = items;
       let itemMaster = items;
       delete itemMaster.PurchaseDetails;
       console.log(purchaseDetailsList);
       console.log(masterID);
+      //valueList.push(purchaseDetailsList);
+      console.log(valueList);
   });
-  purchaseModel.InsertData(purchaseList,purchaseDetailsList, function(err, purchase)
+  purchaseModel.InsertData(purchaseList,valueList, function(err, purchase)
   {   
-    if (err)
+    if(err)
     {
       logger.info("Error Purchase user from User API"+ err.message)
       res.send(err);
     }
     else
     {
-      res.send(purchase);
+      res.json(purchase);
     }
   });
 };

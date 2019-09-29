@@ -58,11 +58,11 @@ DELIMITER ;
 
 CREATE TABLE IF NOT EXISTS PurchaseMaster
 (
-	PurchaseMasterID	VARCHAR(25) NOT NULL,
-	Date				DATETIME,
+	PurchaseMasterID		VARCHAR(25) NOT NULL,
+	Date					DATETIME,
 	ServiceCategoryID    	Varchar (25),
 	CurrencyCode 			Varchar (25),
-	LocationID  		Varchar (25),
+	LocationID  			Varchar (25),
     
     CONSTRAINT PK_PurchaseMaster_PurchaseMasterID PRIMARY KEY (PurchaseMasterID)
 	#--CONSTRAINT FK_PurchaseMaster_ServiceCategoryID FOREIGN KEY (ServiceCategoryID) REFERENCES ServiceCategory(ServiceCategoryID)
@@ -76,10 +76,10 @@ CREATE TABLE IF NOT EXISTS PurchaseDetails
 	PurchaseDetailsID	VARCHAR(25) NOT NULL, 
 	PurchaseMasterID	VARCHAR(25) NOT NULL ,
 	PurchaseQty			Numeric(18,4)DEFAULT 0, 
-	ProductID    		Numeric(18,4) NOT NULL,
+	ProductID    		Varchar(25) NOT NULL,
 	Rate 				Numeric(18,4), 
 	PurchaseAmount  	Numeric(18,4)DEFAULT 0, 
-    CONSTRAINT PK_PurchaseDetails_PurchaseMasterID PRIMARY KEY (PurchaseMasterID),
+    CONSTRAINT PK_PurchaseDetails_PurchaseDetailsID PRIMARY KEY (PurchaseDetailsID),
     CONSTRAINT FK_PurchaseMaster_PurchaseMasterID FOREIGN KEY (PurchaseMasterID) REFERENCES PurchaseMaster(PurchaseMasterID)
     
     #--CONSTRAINT FK_PurchaseMaster_ProductID FOREIGN KEY (ProductID) REFERENCES Product(ProductID)

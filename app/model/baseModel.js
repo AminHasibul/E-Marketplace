@@ -3,58 +3,126 @@ var CommonEnum = require('../../libs/helper/enums.js');
 var logger = require('../../libs/helper/logger');
 var { Paging } = require('../../libs/utility/pageSetup');
 
-var insertSingleData = function (TableName, Item,callback) 
+/*var insertSingleData = function (TableName, Item) 
 {
-    return insertMaster(TableName, Item, callback)
+    insertMaster(TableName, Item);
 }
 
-var insertChildData = function (TableName, ItemList, refID, callback, isChild) {
+var insertChildData = function (TableName, ItemList, isChild)
+{insertMasterChildData
     if (isChild == fasle) 
     {
-        return insertMultipleItems(TableName, ItemList, callback)
+        insertMultipleItems(TableName, ItemList)
     }
     if (isChild) 
     {
-        return insertMultipleChildItems(TableName, ItemList, refID, callback)
+        insertMultipleChildItems(TableName, ItemList);
     }
-}
+}*/
 
-function insertMaster(TableName, Items, callback) 
+const insertMasterChildData = function(tablelist,valueList,con,callback)
 {
-   // sql.query('INSERT INTO '+ TableName+' SET ?', [Items], function (err, result) {
-    //    return callback(err, result);
-    //});
-
-    Items.forEach(function (Item)
+    try
     {
-        sql.query('INSERT INTO '+ TableName +' SET ?', [Item], function (err, data) {
-            if(err) {
-                console.log("error: ", err);
-                callback(err, null);
-            }
-            else{
-               // console.log (userId);
-                //callback(null, data);
-                
-            }
-        });
-    })
+        console.log(tablelist);
+        console.log(valueList);
+
+        if(tablelist.length != valueList.length)
+        {
+            console.log("Error Tablelist length and value list did not match ");
+            return "Error Tablelist length and value list did not match "
+        }
+        var result ="";
+
+        tablelist.forEach(function (tableNames)
+        {        
+            valueList.forEach(function (values)
+            {
+                values.forEach(function (valuelist)
+                {
+                    // matching the table name for ensuring updating data only in to the matching table field
+                    if(tableNames == valuelist.TableName)
+                    {
+                        // removing the extra column which is not in the table
+                        delete valuelist.TableName;
+
+                        sql.query('INSERT INTO '+ tableNames +' SET ?', [valuelist], function (err, data) 
+                        {
+                            if(err)
+                            {
+                                console.log("error: ", err);
+                                result = err;
+                                callback(null,err);
+                            }
+                            else
+                            {
+                                result += data;
+                            }
+                        });
+                    }
+                });
+            });
+        })
+        //sql.end();
+        callback (null,result);
+    }
+    catch (ex) 
+    {
+        console.log(ex);
+        throw ex;
+    }    
 }
 
-function insertMultipleChildItems(TableName, ItemList, callback) {
-    async.each(ItemList, function (Item, asyncCallback) {
-        connection.query('INSERT INTO '+ TableName+' SET ?', [ Item], function (err, data) {
-            if(err) {
+const insertSingleData = function (TableName, Items,callback) 
+{
+    var result ="";
+    Items.forEach(function (Item)
+    {        
+        sql.query('INSERT INTO '+ TableName +' SET ?', [Item], function (err, data) {
+            if(err)
+            {
                 console.log("error: ", err);
-                callback(err, null);
+                result = err;
+                callback(null,err);
             }
-            else{
-                //console.log (userId);
-               // callback(null, data);
+            else
+            {
+                result += data;
+               // console.log (userId);
+                //return callback(null, data);
                 
             }
         });
     })
+    //sql.end();
+    callback (null,result);
+}
+
+const insertChildData = function (TableName, ItemList)
+{
+    var result ="";
+    ItemList.each(ItemList, function (Item)
+    {
+        sql.query('INSERT INTO '+ TableName +' SET ?', [Item], function (err, data)
+        {
+            if(err)
+            {
+                console.log("error: ", err);
+                callback( null,err);
+            }
+            else{
+                console.log (data);
+                result += data;
+                
+                
+            }
+        });
+    })
+    //sql.end();
+    sql.end();
+    return result;
+   // callback(null, result);
+    //callback();
        /*() function (err) {
             if (err) {
                 return callback(err);
@@ -73,7 +141,7 @@ function getNextSeqForPrimaryKey(tableName,rowCount,result)
         {
             
             console.log("error: ", err);
-            return (null, err);
+            return (err);
         }
         else
         {
@@ -81,7 +149,7 @@ function getNextSeqForPrimaryKey(tableName,rowCount,result)
             var nxtID =NextGenID+rowCount;
             updateNextSeqGenID(tableName,year,NextGenID);
             logger.info("getting next avaiable no  for primary key generator",result);
-            return (null,NextGenID);
+            return (NextGenID);
         }
     });
 }
@@ -98,13 +166,13 @@ function updateNextSeqGenID(TableName,Year,rowCount,result)
             {
                
                 console.log("error: ", err);
-               return err;
+                return (err);
             }
             else
             {
                 console.log("Result: ",res);
                 logger.info("Updating next avaiable no  for primary key generator",res);
-                return res;
+                return (res);
             }
         });
 
@@ -167,5 +235,6 @@ module.exports = {
     insertChildData,
     getUniqueSeqForchild,
     makeUniqueKeyForMaster,
-    makeUniqueKeyForchild
+    makeUniqueKeyForchild,
+    insertMasterChildData
 }
