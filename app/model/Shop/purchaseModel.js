@@ -3,66 +3,50 @@ const con = require('../../../libs/dbConnect/mysqlCon.js');
 const BaseModel = require('../baseModel');
 var logger = require('../../../libs/helper/logger');
 
-const InsertData = function (purchaseMasterList,purchaseDetailsList, callback)
+const InsertData = function (purchaseMasterList, purchaseDetailsList, purchase)
 {
-    try
+    try 
     {
         con.beginTransaction(function (err)
         {
             logger.info("Transaction Begin");
-            if (err)
-            {   logger.info("Transaction Error " + err );
+            if (err) 
+            {
+                logger.info("Transaction Error " + err);
                 throw err;
             }
             var tableList = [];
+           
             tableList.push("PurchaseMaster");
             tableList.push("PurchaseDetails");
-           
-            var dataValueList = [purchaseMasterList,purchaseDetailsList]
-            
-            BaseModel.insertMasterChildData(tableList,dataValueList,con,callback,function (err, result)
+
+            var dataValueList = [purchaseMasterList, purchaseDetailsList]
+
+            BaseModel.insertMasterChildData(tableList, dataValueList, con, purchase, function (err, result)
             {
                 logger.info("Transaction insertSingleData " + purchaseDetailsList);
-
-                console.log("Transaction insertSingleData " + purchaseDetailsList);
-                if (err)
+                
+                if (err) 
                 {
                     logger.info("Transaction insertSingleData Eroor " + err);
                     con.rollback(con, err);
-                    callback(null,err);
+                    purchase(null, err);
                 }
-                else
+                else 
                 {
-                   
                     con.commit(con);
-                    callback(null,result);
-                    BaseModel.insertChildData('PurchaseDetails',purchaseDetailsList,true, function (err, data)
-                    {
-                        logger.info("Transaction insertChildData " + purchaseDetailsList);
-                        if (err)
-                        {
-                            logger.info("Transaction insertChildData" +err +" "+ purchaseDetailsList);
-                            con.rollback(con, err);
-                        } else 
-                        {
-                            con.commit(con);
-                        }
-                    });
+                    purchase(null, result);          
                 }
             });
-            if(err)
-            {
-                logger.info("err"+ err);
-            }
-        });     
+        });
     }
-    catch(ex)
+    catch (ex) 
     {
         logger.info("Exceptionm from the model before called");
         throw ex;
     }
 };
-  
+
 
 
 
@@ -178,4 +162,4 @@ mysqlDb.sync()
 .then(() => console.log("Database has been synced"))
 .catch((err) => console.error("Error creating databse"+err))
 */
-module.exports= {BaseModel,InsertData};
+module.exports = { BaseModel, InsertData };

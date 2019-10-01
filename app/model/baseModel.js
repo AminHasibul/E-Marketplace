@@ -19,148 +19,170 @@ var insertChildData = function (TableName, ItemList, isChild)
         insertMultipleChildItems(TableName, ItemList);
     }
 }*/
+//#region  MasterChild data addition
 
-const insertMasterChildData = function(tablelist,valueList,con,callback)
-{
-    try
+function InsertParentChildData(tablelist, valueList, con, purchase) {
+    try 
     {
-        console.log(tablelist);
-        console.log(valueList);
-
-        if(tablelist.length != valueList.length)
-        {
-            console.log("Error Tablelist length and value list did not match ");
+        if (tablelist.length != valueList.length) {
             return "Error Tablelist length and value list did not match "
         }
-        var result ="";
-
+        var result = "";
+        var i = 0;
+        var totalRows = 0;
+        console.log(valueList);
         tablelist.forEach(function (tableNames)
-        {        
-            valueList.forEach(function (values)
+        {
+            var affeftedRow = 0;
+            valueList.forEach(function (values) 
             {
-                values.forEach(function (valuelist)
-                {
+                console.log(values);
+               
+                console.log (totalRows);
+                values.forEach( function (valuelist) 
+                {                   
                     // matching the table name for ensuring updating data only in to the matching table field
-                    if(tableNames == valuelist.TableName)
-                    {
+                    if (tableNames == valuelist.TableName)
+                    { 
+                        totalRows ++;
                         // removing the extra column which is not in the table
                         delete valuelist.TableName;
 
-                        sql.query('INSERT INTO '+ tableNames +' SET ?', [valuelist], function (err, data) 
+                        sql.query('INSERT INTO ' + tableNames + ' SET ?', [valuelist],function (err, data) 
                         {
                             if(err)
                             {
-                                console.log("error: ", err);
+                                console.log("errorT: ", err);
                                 result = err;
-                                callback(null,err);
+                                purchase(null,err);
                             }
                             else
                             {
-                                result += data;
+                                i++;
+                                affeftedRow += data.affectedRows;
+                                result = affeftedRow;
+                                if ( i >= totalRows)
+                                {
+                                    purchase (null,result);
+                                }
                             }
                         });
                     }
                 });
+              
             });
+           
         })
         //sql.end();
-        callback (null,result);
     }
-    catch (ex) 
-    {
-        console.log(ex);
-        throw ex;
-    }    
+    catch (error) {
+        throw error;
+    }
+   
 }
 
-const insertSingleData = function (TableName, Items,callback) 
-{
-    var result ="";
-    Items.forEach(function (Item)
-    {        
-        sql.query('INSERT INTO '+ TableName +' SET ?', [Item], function (err, data) {
-            if(err)
-            {
+const insertMasterChildData = function (tablelist, valueList, con, purchase) {
+    try 
+    {
+        return InsertParentChildData(tablelist, valueList, con, purchase)
+         ;
+    }
+    catch (ex) {
+        throw ex;
+    }
+}
+//#endregion
+const insertSingleData = function (TableName, Items, callback) {
+    var result = "";
+    Items.forEach(function (Item) {
+        sql.query('INSERT INTO ' + TableName + ' SET ?', [Item], function (err, data) {
+            if (err) {
                 console.log("error: ", err);
                 result = err;
-                callback(null,err);
+                callback(null, err);
             }
-            else
-            {
-                result += data;
-               // console.log (userId);
-                //return callback(null, data);
-                
+            else {
+                return callback(null, data);
+
             }
         });
     })
-    //sql.end();
-    callback (null,result);
+    sql.end();
 }
 
-const insertChildData = function (TableName, ItemList)
-{
-    var result ="";
-    ItemList.each(ItemList, function (Item)
-    {
-        sql.query('INSERT INTO '+ TableName +' SET ?', [Item], function (err, data)
-        {
-            if(err)
-            {
+const insertDataAsCollection = function (TableName, ItemList) {
+    var result = "";
+    ItemList.each(ItemList, function (Item) {
+        sql.query('INSERT INTO ' + TableName + ' SET ?', [Item], function (err, data) {
+            if (err) {
                 console.log("error: ", err);
-                callback( null,err);
+                callback(null, err);
             }
-            else{
-                console.log (data);
+            else {
+                console.log(data);
                 result += data;
-                
-                
             }
         });
     })
     //sql.end();
     sql.end();
-    return result;
-   // callback(null, result);
-    //callback();
-       /*() function (err) {
-            if (err) {
-                return callback(err);
-            }
-        });*/
+    //eturn result;
+    callback(null, result);
 }
 
-function getNextSeqForPrimaryKey(tableName,rowCount,result)
-{
+async function getNextSeqForPrimaryKey(tableName, rowCount, result) {
     var dt = new Date();
     var year = dt.getFullYear();
-    sql.query('SELECT NextGenID FROM PrimaryKeyGenerator WHERE TableName =? AND Year = ?' , [tableName, year],
-    function (err, [{NextGenID}])
+    try 
     {
-        if (err)
-        {
-            
-            console.log("error: ", err);
-            return (err);
+        var NextGenID = await sql.query('SELECT NextGenID FROM PrimaryKeyGenerator WHERE TableName =? AND Year = ?', [tableName, year]);
+
+        if (NextGenID.err) {
+            result = NextGenID.err;
         }
-        else
+        else 
         {
-            console.log("error: ",NextGenID);
-            var nxtID =NextGenID+rowCount;
-            updateNextSeqGenID(tableName,year,NextGenID);
-            logger.info("getting next avaiable no  for primary key generator",result);
-            return (NextGenID);
+            result = NextGenID;
+            var nxtID = NextGenID + rowCount;
+            await updateNextSeqGenID(tableName, year, NextGenID);
+            logger.info("getting next avaiable no  for primary key generator", result);
+            //return (NextGenID);
         }
-    });
+        /*, [tableName, year],
+        function (err, [{NextGenID}])
+        {
+            if (err)
+            {
+                
+                console.log("error: ", err);
+                return (err);
+            }
+            else
+            {
+                console.log("error: ",NextGenID);
+                var nxtID =NextGenID+rowCount;
+                await  updateNextSeqGenID(tableName,year,NextGenID);
+                logger.info("getting next avaiable no  for primary key generator",result);
+                return (NextGenID);
+            }    
+        });*/
+        return result;
+    }
+    catch (ex) {
+        throw ex;
+    }
+    finally {
+        sql.end;
+    }
 }
 
-function updateNextSeqGenID(TableName,Year,rowCount,result)
-{
-    try
-    {
+async function updateNextSeqGenID(TableName, Year, rowCount, result) {
+    try {
         let sqlSP = `CALL spPrimaryKeyGenerator (?,?,?)`;
-        sql.query(sqlSP, [TableName,Year,rowCount],
-        function (err, res)
+        result = await sql.query(sqlSP, [TableName, Year, rowCount]);
+
+        return result;
+        /*,function (err, res)
         {
             if (err)
             {
@@ -174,65 +196,74 @@ function updateNextSeqGenID(TableName,Year,rowCount,result)
                 logger.info("Updating next avaiable no  for primary key generator",res);
                 return (res);
             }
-        });
+        });*/
 
     }
-    catch(ex)
-    {
+    catch (ex) {
         throw ex;
     }
 }
 
-var getUniqueSeqForchild = function(tableName,rowCount)
-{
-    try
-    {
+var getUniqueSeqForchild =  function (tableName, rowCount) {
+    try {
         var seqNo = Math.random(6);
-        seqNo = Number(seqNo.toString().slice(12));
-        getNextSeqForPrimaryKey(tableName,rowCount,seqNo);
-        
+       
+       // await getNextSeqForPrimaryKey(tableName, rowCount, seqNo);
+        seqNo = Number(seqNo.toString().slice(14));
         return seqNo;
     }
-    catch(ex)
-    {
+    catch (ex) {
         throw ex;
     }
 }
-var makeUniqueKeyForMaster = function(tableName,rowCount,tableprefix)
-{
-    try
-    {
+var makeUniqueKeyForMaster =  function (tableName, rowCount, tableprefix) {
+    try {
         var dt = new Date();
         var year = dt.getFullYear();
+        var date = dt.getUTCDay();
+        console.log (date);
         var seqNo = Math.random(6);
-        seqNo = Number(seqNo.toString().slice(12));
-        getNextSeqForPrimaryKey(tableName,rowCount,seqNo);
-        
-        return tableprefix+"-"+year+"-"+seqNo;
+        seqNo = Number(seqNo.toString().slice(14));
+        //seqNo = await getNextSeqForPrimaryKey(tableName, rowCount, seqNo);
+        var mn = dt.getMonth();
+        var date = dt.getDate();
+
+        console.log (date);
+        var time = dt.getHours(+6);
+        var ms = dt.getMilliseconds();
+        seqNo = time+""+ms+seqNo;
+        console.log (seqNo);
+        return tableprefix + "-" + year + "-"+mn+date+"-"+ seqNo;
     }
-    catch(ex)
-    {
+    catch (ex) {
         throw ex;
     }
 }
-var makeUniqueKeyForchild = function(seqNo,tableprefix)
-{
-    try
+var makeUniqueKeyForchild = function (seqNo, tableprefix) {
+    try 
     {
         var dt = new Date();
         var year = dt.getFullYear();
-        return tableprefix+"-"+year+"-"+seqNo;
+        var mn = dt.getMonth();
+        var date = dt.getDate();
+
+        console.log (date);
+        var time = dt.getHours(+6);
+        var ms = dt.getMilliseconds();
+        seqNo = time+""+ms+seqNo;
+        console.log (seqNo);
+        return tableprefix + "-" + year + "-"+mn+date+"-"+ seqNo;
     }
-    catch(ex)
-    {
+    catch (ex) {
         throw ex;
     }
+
 }
 
 
 module.exports = {
     insertSingleData,
-    insertChildData,
+    insertDataAsCollection,
     getUniqueSeqForchild,
     makeUniqueKeyForMaster,
     makeUniqueKeyForchild,
