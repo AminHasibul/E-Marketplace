@@ -1,18 +1,4 @@
 'use strict';
-/*module.exports = function(app) 
-{
-  var User = require('../..../../controllers/userController');
-
-  app.route('/users')
-    .get(User.list_all_user)
-    .post(User.create_user);
-
-  app.route('/users/:userId')
-    .get(User.get_a_user)
-    .put(User.patch_user)
-    .delete(User.delete_a_user);
-};
-*/
 
 const UsersController = require('../../../controllers/userController');
 const PermissionMiddleware = require('../../../../common/middleware/authPermission');

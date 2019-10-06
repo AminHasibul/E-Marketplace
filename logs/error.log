@@ -1,0 +1,1449 @@
+2019-09-26T08:39:30.115Z [error]: main - uncaughtException: Cannot find module '../../libs/dbConnect/mysqlCon.js'
+Require stack:
+- /home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js
+- /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js
+- /home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js
+- /home/hasibulamin/Project/E-MarketPlace/app/routes/route.js
+- /home/hasibulamin/Project/E-MarketPlace/server.js
+Error: Cannot find module '../../libs/dbConnect/mysqlCon.js'
+Require stack:
+- /home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js
+- /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js
+- /home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js
+- /home/hasibulamin/Project/E-MarketPlace/app/routes/route.js
+- /home/hasibulamin/Project/E-MarketPlace/server.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:2:13)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+2019-09-26T08:40:07.346Z [error]: main - uncaughtException: Unexpected token ;
+/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:62
+function updateNextSeqGenID(TableName,Year,rowCount);
+                                                    ^
+
+SyntaxError: Unexpected token ;
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-09-26T08:40:44.443Z [error]: main - uncaughtException: Cannot find module '../../../libs/dbConnect/mysqlCon.js'
+Require stack:
+- /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js
+- /home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js
+- /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js
+- /home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js
+- /home/hasibulamin/Project/E-MarketPlace/app/routes/route.js
+- /home/hasibulamin/Project/E-MarketPlace/server.js
+Error: Cannot find module '../../../libs/dbConnect/mysqlCon.js'
+Require stack:
+- /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js
+- /home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js
+- /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js
+- /home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js
+- /home/hasibulamin/Project/E-MarketPlace/app/routes/route.js
+- /home/hasibulamin/Project/E-MarketPlace/server.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:1:11)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+2019-09-26T08:41:45.565Z [error]: main - uncaughtException: lastRowNow is not defined
+ReferenceError: lastRowNow is not defined
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:136:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+2019-09-26T08:42:35.229Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:482:19)
+    at Object.shopRoute (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js:17:9)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:22)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T08:43:39.147Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:482:19)
+    at Object.shopRoute (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js:17:9)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:22)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T08:46:47.594Z [error]: main - uncaughtException: Routes.API.ShopRoute.ShopRoute is not a function
+TypeError: Routes.API.ShopRoute.ShopRoute is not a function
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:22)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T08:47:26.772Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:482:19)
+    at Object.ShopRoute (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js:17:9)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:22)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T08:48:43.191Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:482:19)
+    at Object.GetShopRoute (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js:17:9)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:26)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T08:49:38.688Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:482:19)
+    at Object.GetShopRoute (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js:17:9)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:23)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T08:52:11.677Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:482:19)
+    at Object.GetShopRoute (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/shopRoute.js:17:9)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:23)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T08:52:30.620Z [error]: main - uncaughtException: Cannot read property 'GetShopRoute' of undefined
+TypeError: Cannot read property 'GetShopRoute' of undefined
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:25)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T08:54:30.539Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.<computed> [as get] (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:482:19)
+    at Object.shopRoute (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/route.js:17:9)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:46:23)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11
+2019-09-26T09:10:17.433Z [error]: main - uncaughtException: GetShopRoute is not defined
+ReferenceError: GetShopRoute is not defined
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/route.js:19:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/routes/route.js:3:18)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+2019-09-26T09:35:58.797Z [error]: main - uncaughtException: res is not defined
+ReferenceError: res is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:54:40)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T09:38:51.101Z [error]: main - uncaughtException: res is not defined
+ReferenceError: res is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:54:40)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T10:01:23.804Z [error]: main - uncaughtException: res is not defined
+ReferenceError: res is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:54:40)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T10:08:44.184Z [error]: main - uncaughtException: TableName is not defined
+ReferenceError: TableName is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:32)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T10:20:28.945Z [error]: main - uncaughtException: TableName is not defined
+ReferenceError: TableName is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:54:32)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T10:26:17.665Z [error]: main - uncaughtException: TableName is not defined
+ReferenceError: TableName is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:32)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T10:31:11.881Z [error]: main - uncaughtException: res is not defined
+ReferenceError: res is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:53:35)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T10:33:51.735Z [error]: main - uncaughtException: TableName is not defined
+ReferenceError: TableName is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:32)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T10:39:45.691Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9908
+Error: listen EADDRINUSE: address already in use :::9908
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T10:39:56.003Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9908
+Error: listen EADDRINUSE: address already in use :::9908
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T10:40:07.811Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9908
+Error: listen EADDRINUSE: address already in use :::9908
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T10:40:34.193Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9908
+Error: listen EADDRINUSE: address already in use :::9908
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T10:42:36.199Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9908
+Error: listen EADDRINUSE: address already in use :::9908
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T10:42:55.342Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9908
+Error: listen EADDRINUSE: address already in use :::9908
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T10:45:26.063Z [error]: main - uncaughtException: Year is not defined
+ReferenceError: Year is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:59:42)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T10:47:44.145Z [error]: main - uncaughtException: tableName is not defined
+ReferenceError: tableName is not defined
+    at updateNextSeqGenID (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:71:27)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:59:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+2019-09-26T10:48:18.117Z [error]: main - uncaughtException: tableName is not defined
+ReferenceError: tableName is not defined
+    at updateNextSeqGenID (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:71:27)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:59:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+2019-09-26T10:50:09.775Z [error]: main - uncaughtException: tableName is not defined
+ReferenceError: tableName is not defined
+    at updateNextSeqGenID (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:71:27)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:59:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+2019-09-26T10:53:40.789Z [error]: main - uncaughtException: tableName is not defined
+ReferenceError: tableName is not defined
+    at updateNextSeqGenID (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:71:27)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:59:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+2019-09-26T11:00:35.513Z [error]: main - uncaughtException: result is not a function
+TypeError: result is not a function
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:84:17)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T11:05:19.097Z [error]: main - uncaughtException: val.slice is not a function
+TypeError: val.slice is not a function
+    at escapeString (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:202:23)
+    at Object.escape (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:56:21)
+    at Object.format (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:100:19)
+    at Connection.format (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:274:20)
+    at Connection.query (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:192:22)
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:9)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+2019-09-26T11:06:18.574Z [error]: main - uncaughtException: val.slice is not a function
+TypeError: val.slice is not a function
+    at escapeString (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:202:23)
+    at Object.escape (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:56:21)
+    at Object.format (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:100:19)
+    at Connection.format (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:274:20)
+    at Connection.query (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:192:22)
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:9)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+2019-09-26T11:08:45.148Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9907
+Error: listen EADDRINUSE: address already in use :::9907
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T11:08:59.961Z [error]: main - uncaughtException: val.slice is not a function
+TypeError: val.slice is not a function
+    at escapeString (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:202:23)
+    at Object.escape (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:56:21)
+    at Object.format (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:100:19)
+    at Connection.format (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:274:20)
+    at Connection.query (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:192:22)
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:9)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+2019-09-26T11:10:01.544Z [error]: main - uncaughtException: val.slice is not a function
+TypeError: val.slice is not a function
+    at escapeString (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:202:23)
+    at Object.escape (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:56:21)
+    at Object.format (/home/hasibulamin/Project/E-MarketPlace/node_modules/sqlstring/lib/SqlString.js:100:19)
+    at Connection.format (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:274:20)
+    at Connection.query (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:192:22)
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:9)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+2019-09-26T11:15:09.330Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:70:15
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:25:16)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T11:23:51.305Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:70:15
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:25:16)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T11:29:04.589Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:70:15
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:25:16)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T11:31:53.170Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:70:15
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:25:16)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T11:36:40.731Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:70:15
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:25:16)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T11:41:20.252Z [error]: main - uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:5)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+2019-09-26T11:42:10.023Z [error]: main - uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:5)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+2019-09-26T11:50:13.353Z [error]: main - uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:5)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+2019-09-26T11:53:49.487Z [error]: main - uncaughtException: Items.foreach is not a function
+TypeError: Items.foreach is not a function
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:11)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+2019-09-26T11:55:16.763Z [error]: main - uncaughtException: connection is not defined
+ReferenceError: connection is not defined
+    at Function.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:26:9)
+    at Array.forEach (<anonymous>)
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:24:11)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+2019-09-26T12:00:38.942Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:71:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:27:20)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T12:04:52.869Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:71:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:31:20)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T12:08:27.735Z [error]: main - uncaughtException: userId is not defined
+ReferenceError: userId is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:36:30)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T12:11:32.347Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:71:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:33:17)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T12:12:33.176Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:71:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:33:17)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T12:13:55.500Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:71:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:33:17)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T12:15:07.623Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:75:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:37:17)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T12:29:11.886Z [error]: main - uncaughtException: result is not a function
+TypeError: result is not a function
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:84:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-26T12:31:48.618Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:75:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:37:17)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T12:32:25.013Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:75:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:37:17)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-26T12:34:41.429Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9907
+Error: listen EADDRINUSE: address already in use :::9907
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T12:35:09.233Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9907
+Error: listen EADDRINUSE: address already in use :::9907
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T12:35:20.050Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9907
+Error: listen EADDRINUSE: address already in use :::9907
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-26T12:35:40.601Z [error]: main - uncaughtException: listen EADDRINUSE: address already in use :::9907
+Error: listen EADDRINUSE: address already in use :::9907
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/server.js:50:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+2019-09-29T07:05:57.106Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:75:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:38:17)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-29T07:36:48.453Z [error]: main - uncaughtException: err is not defined
+ReferenceError: err is not defined
+    at insertMaster (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:44:5)
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:8:12)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+2019-09-29T10:11:32.417Z [error]: main - uncaughtException: json is not defined
+ReferenceError: json is not defined
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:46:4)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+2019-09-29T10:18:20.892Z [error]: main - uncaughtException: result is not defined
+ReferenceError: result is not defined
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:44:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-29T10:20:45.993Z [error]: main - uncaughtException: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:85:14)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at /home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:236:14
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2019-09-29T10:26:07.890Z [error]: main - uncaughtException: result is not a function
+TypeError: result is not a function
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:99:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-29T10:35:40.093Z [error]: main - uncaughtException: Invalid status code: Status 200 Success Inserting Data
+RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: Status 200 Success Inserting Data
+    at ServerResponse.writeHead (_http_server.js:241:11)
+    at ServerResponse.writeHead (/home/hasibulamin/Project/E-MarketPlace/node_modules/on-headers/index.js:44:26)
+    at ServerResponse._implicitHeader (_http_server.js:232:8)
+    at write_ (_http_outgoing.js:607:9)
+    at ServerResponse.end (_http_outgoing.js:717:5)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:221:10)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:75:11
+    at Object.insertSingleData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:45:5)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+2019-09-29T10:58:25.848Z [error]: main - uncaughtException: Cannot enqueue Quit after invoking quit.
+Error: Cannot enqueue Quit after invoking quit.
+    at Protocol._validateEnqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:215:16)
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+    at Protocol.quit (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:91:23)
+    at Connection.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:242:18)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:63:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:20:24)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+2019-09-29T10:59:13.146Z [error]: main - uncaughtException: Cannot enqueue Quit after invoking quit.
+Error: Cannot enqueue Quit after invoking quit.
+    at Protocol._validateEnqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:215:16)
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+    at Protocol.quit (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:91:23)
+    at Connection.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:242:18)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:63:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:20:24)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+2019-09-29T11:00:27.717Z [error]: main - uncaughtException: Cannot enqueue Quit after invoking quit.
+Error: Cannot enqueue Quit after invoking quit.
+    at Protocol._validateEnqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:215:16)
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+    at Protocol.quit (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:91:23)
+    at Connection.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:242:18)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:63:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:20:24)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+2019-09-29T11:08:44.578Z [error]: main - uncaughtException: Cannot enqueue Quit after invoking quit.
+Error: Cannot enqueue Quit after invoking quit.
+    at Protocol._validateEnqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:215:16)
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+    at Protocol.quit (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:91:23)
+    at Connection.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:242:18)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:63:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:20:24)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+2019-09-29T11:11:17.891Z [error]: main - uncaughtException: Cannot enqueue Quit after invoking quit.
+Error: Cannot enqueue Quit after invoking quit.
+    at Protocol._validateEnqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:215:16)
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+    at Protocol.quit (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:91:23)
+    at Connection.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:242:18)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:63:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:20:24)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+2019-09-29T11:12:46.907Z [error]: main - uncaughtException: Cannot enqueue Quit after invoking quit.
+Error: Cannot enqueue Quit after invoking quit.
+    at Protocol._validateEnqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:215:16)
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+    at Protocol.quit (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:91:23)
+    at Connection.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:242:18)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:63:13)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:20:24)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+2019-09-29T11:16:19.243Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:158:21)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:75:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:44:25)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+2019-09-29T12:07:41.816Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:80:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:49:29)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-09-29T12:24:29.561Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:80:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-09-29T12:25:06.246Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:80:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-09-29T12:29:22.934Z [error]: main - uncaughtException: tableList.add is not a function
+TypeError: tableList.add is not a function
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:18:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+2019-09-29T12:37:15.389Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:80:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-09-29T12:38:20.604Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:80:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-09-29T12:39:23.272Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:80:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-09-29T12:42:39.308Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:80:11
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:55:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-10-01T05:18:01.140Z [error]: main - uncaughtException: insertChildData is not defined
+ReferenceError: insertChildData is not defined
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:223:5)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+2019-10-01T05:37:48.768Z [error]: main - uncaughtException: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:126:14)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at /home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:236:14
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2019-10-01T06:00:25.412Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:202
+        seqNo = await getNextSeqForPrimaryKey(tableName,rowCount,seqNo);
+                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:01:11.008Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:151
+                await  updateNextSeqGenID(tableName,year,NextGenID);
+                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:02:31.434Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:48
+                        await sql.query('INSERT INTO '+ tableNames +' SET ?', [valuelist], function (err, data) 
+                        ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:03:26.527Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:48
+                        await sql.query('INSERT INTO '+ tableNames +' SET ?', [valuelist], async function (err, data) 
+                        ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:06:12.507Z [error]: main - uncaughtException: Unexpected token const
+/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:6
+async const InsertData = function (purchaseMasterList, purchaseDetailsList, purchase)
+      ^^^^^
+
+SyntaxError: Unexpected token const
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:06:44.857Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:25
+            await BaseModel.insertMasterChildData(tableList, dataValueList, con, purchase, function (err, result)
+            ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:23:33.293Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:39
+                        purchase = await sql.query('INSERT INTO ' + tableNames + ' SET ?', [valuelist]); //async function (err, data) 
+                                   ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:28:16.221Z [error]: main - uncaughtException: ER_DUP_ENTRY: Duplicate entry '[object Promise]' for key 'PRIMARY'
+Error: ER_DUP_ENTRY: Duplicate entry '[object Promise]' for key 'PRIMARY'
+    at Query.Sequence._packetToError (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:209:13)
+    at addChunk (_stream_readable.js:305:12)
+    --------------------
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:201:25)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:42:46
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:35:24
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:33:23
+    at Array.forEach (<anonymous>)
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:31:19)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:78:9)
+2019-10-01T06:38:06.948Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:27
+        masterID = await purchaseModel.BaseModel.makeUniqueKeyForMaster("PurchaseMaster", totalRow, "PM");
+                   ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/route.js:3:28)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:39:44.140Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:39
+            var childID = await purchaseModel.BaseModel.makeUniqueKeyForchild(childSeq, "PD");
+                          ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/route.js:3:28)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:40:08.517Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:39
+            var childID = await purchaseModel.BaseModel.makeUniqueKeyForchild(childSeq, "PD");
+                          ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/routes/api/shop/route.js:3:28)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:44:52.985Z [error]: main - uncaughtException: await is only valid in async function
+/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:128
+        var NextGenID = await sql.query('SELECT NextGenID FROM PrimaryKeyGenerator WHERE TableName =? AND Year = ?', [tableName, year]);
+                        ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:872:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+2019-10-01T06:48:32.029Z [error]: main - uncaughtException: ER_DUP_ENTRY: Duplicate entry '[object Promise]' for key 'PRIMARY'
+Error: ER_DUP_ENTRY: Duplicate entry '[object Promise]' for key 'PRIMARY'
+    at Query.Sequence._packetToError (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:209:13)
+    at addChunk (_stream_readable.js:305:12)
+    --------------------
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:201:25)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:42:46
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:35:24
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:33:23
+    at Array.forEach (<anonymous>)
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:31:19)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:78:9)
+2019-10-01T06:50:58.873Z [error]: main - uncaughtException: ER_DUP_ENTRY: Duplicate entry '[object Promise]' for key 'PRIMARY'
+Error: ER_DUP_ENTRY: Duplicate entry '[object Promise]' for key 'PRIMARY'
+    at Query.Sequence._packetToError (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:209:13)
+    at addChunk (_stream_readable.js:305:12)
+    --------------------
+    at Protocol._enqueue (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:201:25)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:42:46
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:35:24
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:33:23
+    at Array.forEach (<anonymous>)
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:31:19)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:78:9)
+2019-10-01T06:53:22.021Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:61:17
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:48:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+2019-10-01T07:15:35.356Z [error]: main - uncaughtException: err is not defined
+ReferenceError: err is not defined
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:65:9)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:73:16)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:25:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+    at Protocol._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/Parser.js:433:10)
+2019-10-01T07:17:16.179Z [error]: main - uncaughtException: Invalid status code: New Record Inserted Successfully
+RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: New Record Inserted Successfully
+    at ServerResponse.writeHead (_http_server.js:241:11)
+    at ServerResponse.writeHead (/home/hasibulamin/Project/E-MarketPlace/node_modules/on-headers/index.js:44:26)
+    at ServerResponse._implicitHeader (_http_server.js:232:8)
+    at write_ (_http_outgoing.js:607:9)
+    at ServerResponse.end (_http_outgoing.js:717:5)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:221:10)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:60:13
+    at Array.forEach (<anonymous>)
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:32:19)
+2019-10-01T07:17:53.692Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:60:13
+    at Array.forEach (<anonymous>)
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:32:19)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:73:16)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/Shop/purchaseModel.js:25:23)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+2019-10-01T07:25:26.071Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:58:38)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.OkPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:72:10)
+2019-10-01T07:38:08.339Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:61:17
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:35:23
+    at Array.forEach (<anonymous>)
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:32:19)
+    at Object.insertMasterChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:75:16)
+2019-10-01T07:47:53.146Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:63:21
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:35:23
+    at Array.forEach (<anonymous>)
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:32:19)
+2019-10-01T07:55:26.068Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:63:21
+    at Array.forEach (<anonymous>)
+    at /home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:35:23
+    at Array.forEach (<anonymous>)
+    at InsertParentChildData (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:32:19)
+2019-10-01T07:59:09.607Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:61:37)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+2019-10-01T11:00:57.775Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:57:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-10-01T11:06:05.314Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:57:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
+2019-10-01T11:43:00.280Z [error]: main - uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/hasibulamin/Project/E-MarketPlace/node_modules/express/lib/response.js:267:15)
+    at /home/hasibulamin/Project/E-MarketPlace/app/controllers/Shop/purchaseController.js:56:17
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/app/model/baseModel.js:57:33)
+    at Query.<anonymous> (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query.ErrorPacket (/home/hasibulamin/Project/E-MarketPlace/node_modules/mysql/lib/protocol/sequences/Query.js:90:8)
