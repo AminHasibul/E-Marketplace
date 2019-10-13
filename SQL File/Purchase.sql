@@ -86,3 +86,60 @@ CREATE TABLE IF NOT EXISTS PurchaseDetails
     #--CONSTRAINT FK_PurchaseMaster_LocationID FOREIGN KEY (LocationID) REFERENCES StoreLocation(LocationID)
 );
 
+
+
+DROP PROCEDURE IF EXISTS spGetAllList;
+
+DELIMITER $$
+CREATE PROCEDURE spGetAllList()
+BEGIN
+     
+     SELECT payment_id, shipper_id, convert( amount, decimal(27,2)) as amount, 
+     convert( balance_before, decimal(27,2)) as balance_before, convert( balance_after, decimal(27,2)) 
+     as balance_after, type, truck_id, in_bkash_phone, txn_id, in_type, receive_type, refund_reason, details, 
+     created_on, shipper_reference from shipper_payment where shipper_id = '33314';
+
+     SELECT request_id, shipper_id, shipper_name, shipper_phone, pick_time, tt_category, tt_open_cover, product_type,
+       pick_thanaId, drop_thanaId,
+       pick_unionId, pick_areaId, drop_unionId, drop_areaId,
+       status, convert( trip_price, decimal(27,2)) as trip_price, convert( owner_price, decimal(27,2)) as owner_price
+     from rq_v where shipper_id = '33314' order by pick_time asc;
+
+    SELECT bid_id, owner_id, driver_name, review, driver_phone, model, truck_categrory_text, truck_id, truck_no,
+            imei_id, convert(owner_rate, decimal(27,2)) as owner_rate, bid_status, request_id, shipper_id, distance, 
+            convert( rate, decimal(27,2)) as rate, pick_district, pick_division, pick_add, pick_add_title, 
+            drop_district, drop_division, drop_add, drop_add_title, shipper_name, shipper_phone, pick_time,
+            number_of_truck, tt_category, tt_open_cover, product_type, pick_thanaId, drop_thanaId, 
+            pick_unionId, pick_areaId, drop_unionId, drop_areaId,
+            status, listed, admin_user, convert(trip_price, decimal(27,2)) as trip_price, 
+           convert(owner_price, decimal(27,2)) as owner_price, convert(shipper_advance, decimal(27,2)) 
+           as shipper_advance, convert(owner_advance, decimal(27,2)) as owner_advance, 
+           convert(promo_rate, decimal(27,2)) as promo_rate 
+     FROM shipper_active_trips 
+     where  shipper_id = '33314' order by pick_time asc ;
+
+        SELECT request_id, status FROM request_review where shipper_id = '33314' and shipper_experience = 'not reviewed';
+
+        SELECT id, person_id, convert(balance, decimal(27,2)) as balance, username, company_name, review, admin_user, phone, p_id,
+                 p_assigned_on, ban, created_on, shipper_reference, url, log_status, promo_code_level 
+          FROM p_shipper where id = '5';
+
+        
+        SELECT 'ডিসকাউন্ট আছে!' as title_bangla,'Discount Available!' as title_english,'আপনার ডিসকাউন্ট কোড প্রয়োগ করে নিন।' as message_bangla,
+                      'Please enter discount code to avail the offer!' as message_english ; 
+
+        SELECT 30  as bid_limit; 
+
+        SELECT 3  as ondemandTotalTime;
+        SELECT 15  as onDemandPerPostTime; 
+      
+        SELECT express_total_time, express_per_post_time from express_dispatch_config  ;
+
+        SELECT 'on_demand' as on_demand ;
+
+        SELECT distinct owner_id FROM `trucks_info` 
+             where truck_categrory = any ( select type from tt_category where express_status = 'enabled' );
+
+
+    
+END $$

@@ -1,12 +1,13 @@
 {
-    "PORT": "3030",
-    "BASE_URL": "http://localhost:3030/",
-    "API_URL": "http://localhost:3030/api/",
-    "MYSQL": {
-      "HOST": "localhost",
-      "USER": "hasib",
-      "PASSWORD": "hasib",
-      "DATABASE": "Marketplace_Test",
+    "PORT": "3306",
+    "BASE_URL": "https://n.trucklagbe.com/adminer.php",
+    "API_URL": "https://n.trucklagbe.com/adminer.php/",
+    "MYSQL": 
+    {
+      "HOST": "127.0.0.1",
+      "USER": "root",
+      "PASSWORD": "[=2trucklagbe419@]]",
+      "DATABASE": "n3tl",
       "DIALECT": "mysql",
       "dialectModulePath": "mysql"
     }

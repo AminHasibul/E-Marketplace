@@ -3,22 +3,22 @@ var CommonEnum = require('../../libs/helper/enums.js');
 var logger = require('../../libs/helper/logger');
 var { Paging } = require('../../libs/utility/pageSetup');
 
-/*var insertSingleData = function (TableName, Item) 
-{
-    insertMaster(TableName, Item);
-}
+//var insertSingleData = function (TableName, Item) 
+//{
+    //insertMaster(TableName, Item);
+//}
 
-var insertChildData = function (TableName, ItemList, isChild)
-{insertMasterChildData
-    if (isChild == fasle) 
-    {
-        insertMultipleItems(TableName, ItemList)
-    }
-    if (isChild) 
-    {
-        insertMultipleChildItems(TableName, ItemList);
-    }
-}*/
+// var insertChildData = function (TableName, ItemList, isChild)
+// {insertMasterChildData
+//     if (isChild == fasle) 
+//     {
+//         insertMultipleItems(TableName, ItemList)
+//     }
+//     if (isChild) 
+//     {
+//         insertMultipleChildItems(TableName, ItemList);
+//     }
+// }
 //#region  MasterChild data addition
 
 function InsertParentChildData(tablelist, valueList, con, purchase) {
@@ -65,7 +65,7 @@ function InsertParentChildData(tablelist, valueList, con, purchase) {
                                 {
                                     purchase (null,result);
                                 }
-                            }
+                            }a
                         });
                     }
                 });
@@ -110,25 +110,25 @@ const insertSingleData = function (TableName, Items, callback) {
     sql.end();
 }
 
-const insertDataAsCollection = function (TableName, ItemList) {
-    var result = "";
-    ItemList.each(ItemList, function (Item) {
-        sql.query('INSERT INTO ' + TableName + ' SET ?', [Item], function (err, data) {
-            if (err) {
-                console.log("error: ", err);
-                callback(null, err);
-            }
-            else {
-                console.log(data);
-                result += data;
-            }
-        });
-    })
-    //sql.end();
-    sql.end();
-    //eturn result;
-    callback(null, result);
-}
+// const insertDataAsCollection = function (TableName, ItemList) {
+//     var result = "";
+//     ItemList.each(ItemList, function (Item) {
+//         sql.query('INSERT INTO ' + TableName + ' SET ?', [Item], function (err, data) {
+//             if (err) {
+//                 console.log("error: ", err);
+//                 callback(null, err);
+//             }
+//             else {
+//                 console.log(data);
+//                 result += data;
+//             }
+//         });
+//     })
+//     //sql.end();
+//     sql.end();
+//     //eturn result;
+//     callback(null, result);
+// }
 
 async function getNextSeqForPrimaryKey(tableName, rowCount, result) {
     var dt = new Date();
@@ -182,21 +182,7 @@ async function updateNextSeqGenID(TableName, Year, rowCount, result) {
         result = await sql.query(sqlSP, [TableName, Year, rowCount]);
 
         return result;
-        /*,function (err, res)
-        {
-            if (err)
-            {
-               
-                console.log("error: ", err);
-                return (err);
-            }
-            else
-            {
-                console.log("Result: ",res);
-                logger.info("Updating next avaiable no  for primary key generator",res);
-                return (res);
-            }
-        });*/
+
 
     }
     catch (ex) {
@@ -263,7 +249,6 @@ var makeUniqueKeyForchild = function (seqNo, tableprefix) {
 
 module.exports = {
     insertSingleData,
-    insertDataAsCollection,
     getUniqueSeqForchild,
     makeUniqueKeyForMaster,
     makeUniqueKeyForchild,

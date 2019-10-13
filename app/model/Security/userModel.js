@@ -45,6 +45,26 @@ User.getUserById = function (userId, result)
         });   
 };
 
+// lood test list 
+User.getAlllist = function (result)
+ {
+    let sqlSP = `CALL spGetAllList ()`;
+    sql.query(sqlSP,function (err, res) 
+    {
+
+        if(err)
+        { 
+            logger.info("Getting User List error:"+ err.message);
+            console.log("error: ", err);
+            result(null, err);
+        }
+        else{
+            logger.info("Getting User List ");
+            console.log('use:', res); 
+            result( null ,res);
+        }
+    }); 
+};
 User.getAllUser = function (limit,skip,result)
  {
      logger.info("Getting User List");

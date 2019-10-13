@@ -8,7 +8,7 @@ module.exports = BaseController = (controllerName, Model, option = {}) =>
   logger.info("Writing from the user controler, Get BaseController name" + controllerName);
   const list_all_user = function(req, res)
   {
-    logger.info("Writing from the user controler, Get BaseController name " + Model);
+    //logger.info("Writing from the user controler, Get BaseController name " + Model);
     Model.getAllUser(function(err, user) {
       if (err)
       {

@@ -25,7 +25,7 @@ logger.info("Writing from the user controler, Get controller name" + controllerN
 exports.list_all_user = function(req, res)
 {
  
-    UserModel.getAllUser(function(err, user) {
+    UserModel.getAlllist(function(err, user) {
     if (err)
     {
      
@@ -132,8 +132,7 @@ exports.listAllUsers = function(req, res)
           skip = limit*page;
       }
   }
-  //UserModel.listUsers(limit,page,function(err,result)
-  //UserModel.listUsers(limit,page,function(err,result)
+ 
   UserModel.getAllUser(limit,skip,function(err, result) 
   {
     if (err)
