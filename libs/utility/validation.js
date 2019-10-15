@@ -31,6 +31,7 @@ function validateUser(user)
         username : Joi.string().min(2).required()  
        // email : Joi.email().required()
     };
+   
     return result =Joi.validate(user,schema);
 }
 

@@ -99,6 +99,9 @@ BEGIN
      as balance_after, type, truck_id, in_bkash_phone, txn_id, in_type, receive_type, refund_reason, details, 
      created_on, shipper_reference from shipper_payment where shipper_id = '33314';
 
+
+
+
      SELECT request_id, shipper_id, shipper_name, shipper_phone, pick_time, tt_category, tt_open_cover, product_type,
        pick_thanaId, drop_thanaId,
        pick_unionId, pick_areaId, drop_unionId, drop_areaId,

@@ -3,6 +3,7 @@ var sql = require('../../../libs/dbConnect/mysqlCon.js');
 var CommonEnum = require('../../../libs/helper/enums.js');
 var logger = require('../../../libs/helper/logger');
 var {Paging} = require('../../../libs/utility/pageSetup');
+
 var User = function(user)
 {
     //this.id = CommonEnum.NewMasterID.value;
@@ -16,19 +17,54 @@ var User = function(user)
     this.deleted_at = null;
 };
 User.createUser = function (newUser, result)
-{    
-    sql.query("INSERT INTO Users set ?", newUser, function (err, res) {
+{   
+    // BaseModel.insertSingleData('Users', newUser,result, function (err, result)
+    // {
+    //     logger.info("Transaction insertSingleData " + newUser);
+        
+    //     if (err) 
+    //     {
+    //         logger.info("Transaction insertSingleData Eroor " + err);
+    //         con.rollback(con, err);
+    //         result(null, err);
+    //     }
+    //     else 
+    //     {
+    //         con.commit(con);
+    //         result(null, result);          
+    //     }
+    // }); 
+    BaseModel.insertData('testShipperBids',result, function (err, result)
+    {
+        logger.info("Transaction insertSingleData " );
+        
+        if (err) 
+        {
+            logger.info("Transaction insertSingleData Eroor " + err);
+            con.rollback(con, err);
+            result(null, err);
+        }
+        else 
+        {
+            con.commit(con);
+            result(null, result);          
+        }
+    }); 
+    
+    // sql.query("INSERT INTO Users set ?", newUser, function (err, res) {
             
-            if(err) {
-                console.log("error: ", err);
-                result(err, null);
-            }
-            else{
-                console.log(res.insertId);
-                result(null, res.insertId);
-            }
-        });           
+    //         if(err) {
+    //             console.log("error: ", err);
+    //             result(err, null);
+    //         }
+    //         else{
+    //             console.log(res.insertId);
+    //             result(null, res.insertId);
+    //         }
+    //     });           
 };
+
+
 User.getUserById = function (userId, result)
  {
    console.log(userId);

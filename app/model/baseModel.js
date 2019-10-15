@@ -3,10 +3,10 @@ var CommonEnum = require('../../libs/helper/enums.js');
 var logger = require('../../libs/helper/logger');
 var { Paging } = require('../../libs/utility/pageSetup');
 
-//var insertSingleData = function (TableName, Item) 
-//{
-    //insertMaster(TableName, Item);
-//}
+// var insertSingleData = function (TableName, Item) 
+// {
+//     insertMaster(TableName, Item);
+// }
 
 // var insertChildData = function (TableName, ItemList, isChild)
 // {insertMasterChildData
@@ -63,9 +63,10 @@ function InsertParentChildData(tablelist, valueList, con, purchase) {
                                 result = affeftedRow;
                                 if ( i >= totalRows)
                                 {
+                                    //sql.end();
                                     purchase (null,result);
                                 }
-                            }a
+                            }
                         });
                     }
                 });
@@ -94,41 +95,80 @@ const insertMasterChildData = function (tablelist, valueList, con, purchase) {
 //#endregion
 const insertSingleData = function (TableName, Items, callback) {
     var result = "";
-    Items.forEach(function (Item) {
-        sql.query('INSERT INTO ' + TableName + ' SET ?', [Item], function (err, data) {
+    
+    sql.query('INSERT INTO ' + TableName + ' SET ?', [Items], function (err, data) 
+    {
+        if (err) {
+            console.log("error: ", err);
+            result = err;
+            callback(null, err);
+        }
+        else {
+            return callback(null, data);
+
+        }
+    });
+
+    //sql.end();
+}
+const insertData = function (TableName, callback)
+{
+    var result = "";
+    
+    sql.query('Insert into ' + TableName + ' (SELECT bid_id, bid_status, owner_id, truck_id, truck_no, imei_id, convert(owner_rate, decimal(27,2)) as owner_rate, request_id, shipper_id,'+
+      'distance, convert(rate, decimal(27,2)) as rate, pick_district, pick_division, pick_add, pick_add_title, drop_district, drop_division, drop_add,'+
+      'drop_add_title, shipper_name, shipper_phone, pick_time, number_of_truck, tt_category, product_type, pick_thanaId, drop_thanaId,'+
+      'pick_unionId, pick_areaId, drop_unionId, drop_areaId,status, listed, admin_user, convert(trip_price,'+
+      'decimal(27,2)) as trip_price, convert(owner_price, decimal(27,2)) as owner_price,'+
+      'convert(shipper_advance, decimal(27,2)) as shipper_advance, convert(owner_advance, decimal(27,2)) as owner_advance, convert(driver_commission,'+
+      'decimal(27,2)) as driver_commission, username, phone, model, review, truck_categrory_text, tt_open_cover '+
+      ' from shipper_new_bids) ',function (err, data) 
+    {
+        if (err) {
+            console.log("error: ", err);
+            result = err;
+            callback(null, err);
+        }
+        else {
+            callback(null, data);
+
+        }
+    });
+
+    //sql.end();
+}
+var insertDataAsCollection = function (TableName, ItemList) 
+{
+    var i = 0;
+    var totalRows = 0;
+    var affeftedRow = 0;
+    Items.forEach(function (Item)
+    {
+        totalRows ++;
+        sql.query('INSERT INTO ' + TableName + ' SET ?', [Item], function (err, data) 
+        {
             if (err) {
                 console.log("error: ", err);
                 result = err;
                 callback(null, err);
             }
-            else {
-                return callback(null, data);
+            else 
+            {
+                i++;
+                affeftedRow += data.affectedRows;
+                result = affeftedRow;
+                if ( i >= totalRows)
+                {
+                    //sql.end();
+                    callback (null,result);
+                }
+                //r//eturn callback(null, data);
 
             }
         });
     })
-    sql.end();
+    //sql.end();
 }
-
-// const insertDataAsCollection = function (TableName, ItemList) {
-//     var result = "";
-//     ItemList.each(ItemList, function (Item) {
-//         sql.query('INSERT INTO ' + TableName + ' SET ?', [Item], function (err, data) {
-//             if (err) {
-//                 console.log("error: ", err);
-//                 callback(null, err);
-//             }
-//             else {
-//                 console.log(data);
-//                 result += data;
-//             }
-//         });
-//     })
-//     //sql.end();
-//     sql.end();
-//     //eturn result;
-//     callback(null, result);
-// }
 
 async function getNextSeqForPrimaryKey(tableName, rowCount, result) {
     var dt = new Date();
@@ -252,5 +292,7 @@ module.exports = {
     getUniqueSeqForchild,
     makeUniqueKeyForMaster,
     makeUniqueKeyForchild,
-    insertMasterChildData
+    insertMasterChildData,
+    insertDataAsCollection,
+    insertData
 }

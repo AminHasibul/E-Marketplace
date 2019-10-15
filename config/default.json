@@ -1,12 +1,12 @@
 {
     "PORT": "3306",
-    "BASE_URL": "https://n.trucklagbe.com/adminer.php",
-    "API_URL": "https://n.trucklagbe.com/adminer.php/",
+    "BASE_URL": "127.0.0.1",
+    "API_URL": "127.0.0.1/api",
     "MYSQL": 
     {
       "HOST": "127.0.0.1",
-      "USER": "root",
-      "PASSWORD": "[=2trucklagbe419@]]",
+      "USER": "hasib",
+      "PASSWORD": "hasib",
       "DATABASE": "n3tl",
       "DIALECT": "mysql",
       "dialectModulePath": "mysql"

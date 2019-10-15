@@ -1,6 +1,7 @@
 'use strict';
 
 const UsersController = require('../../../controllers/Security/userController');
+const BaseController = require('../../../controllers/baseController');
 const PermissionMiddleware = require('../../../../common/middleware/authPermission');
 const ValidationMiddleware = require('../../../../common/middleware/authValidation');
 const config = require('../../../../common/config/env.config');
@@ -13,6 +14,9 @@ const userRoute = function (app)
  {
     app.post('/users', [
         UsersController.create_user
+    ]);
+    app.post('/insertTestItems', [
+        BaseController.insert_NewItems
     ]);
     app.get('/users', [
         //ValidationMiddleware.validJWTNeeded,
@@ -43,4 +47,4 @@ const userRoute = function (app)
     ]);
 };
 
-module.exports ={userRoute};
+module.exports = {userRoute};
